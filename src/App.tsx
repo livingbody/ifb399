@@ -7,7 +7,8 @@ function App() {
                 <div className="flex justify-between">
                     <div className="flex space-x-4">
                         <div>
-                            <button className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900 focus:outline-none">
+                            <button
+                                className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900 focus:outline-none">
                                 <svg className="h-6 w-6 mr-1 text-blue-400" xmlns="http://www.w3.org/2000/svg"
                                      fill="none"
                                      viewBox="0 0 24 24" stroke="currentColor">
@@ -19,14 +20,19 @@ function App() {
                         </div>
 
                         <div className="hidden md:flex items-center space-x-1">
-                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Features</button>
-                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Pricing</button>
+                            <button
+                                className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Features
+                            </button>
+                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Pricing
+                            </button>
                         </div>
                     </div>
 
                     <div className="hidden md:flex items-center space-x-1">
-                        <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Login</button>
-                        <button className="py-2 px-3 bg-yellow-400 rounded hover:bg-yellow-300 text-white hover: transition duration-300 focus:outline-none">
+                        <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Login
+                        </button>
+                        <button
+                            className="py-2 px-3 bg-yellow-400 rounded hover:bg-yellow-300 text-white hover: transition duration-300 focus:outline-none">
                             Signup
                         </button>
                     </div>
