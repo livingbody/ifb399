@@ -20,10 +20,11 @@ function App() {
                         </div>
 
                         <div className="hidden md:flex items-center space-x-1">
-                            <button
-                                className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Features
+                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">
+                                HOME
                             </button>
-                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Pricing
+                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">
+                                EXPLORE
                             </button>
                         </div>
                     </div>
@@ -50,9 +51,10 @@ function App() {
                 </div>
             </div>
 
+            {/*fit for mobile*/}
             <div className="mobile-menu hidden md:hidden">
-                <button className="block py-2 px-4 text-sm hover:bg-gray-200">Features</button>
-                <button className="block py-2 px-4 text-sm hover:bg-gray-200">Pricing</button>
+                <button className="block py-2 px-4 text-sm hover:bg-gray-200">HOME</button>
+                <button className="block py-2 px-4 text-sm hover:bg-gray-200">EXPLORE</button>
             </div>
         </nav>
     );
