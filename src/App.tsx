@@ -1,40 +1,55 @@
 import React from 'react';
 
-const people = [
-  {
-    name: 'Calvin Hawkins',
-    email: 'calvin.hawkins@example.com',
-    image:
-        'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Kristen Ramos',
-    email: 'kristen.ramos@example.com',
-    image:
-        'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Ted Fox',
-    email: 'ted.fox@example.com',
-    image:
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-]
-
 function App() {
-  return (
-      <ul className="divide-y divide-gray-200">
-        {people.map((person) => (
-            <li key={person.email} className="py-4 flex">
-              <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
-              <div className="ml-3">
-                <p className="text-sm font-medium text-gray-900">{person.name}</p>
-                <p className="text-sm text-gray-500">{person.email}</p>
-              </div>
-            </li>
-        ))}
-      </ul>
-  );
+    return (
+        <nav className="bg-gray-100">
+            <div className="max-w-7xl mx-auto px-1">
+                <div className="flex justify-between">
+                    <div className="flex space-x-4">
+                        <div>
+                            <button className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900 focus:outline-none">
+                                <svg className="h-6 w-6 mr-1 text-blue-400" xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                          d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                                <span className="font-bold">Null Pointer</span>
+                            </button>
+                        </div>
+
+                        <div className="hidden md:flex items-center space-x-1">
+                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Features</button>
+                            <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Pricing</button>
+                        </div>
+                    </div>
+
+                    <div className="hidden md:flex items-center space-x-1">
+                        <button className="py-2 px-3 text-gray-700 hover:text-gray-900 focus:outline-none">Login</button>
+                        <button className="py-2 px-3 bg-yellow-400 rounded hover:bg-yellow-300 text-white hover: transition duration-300 focus:outline-none">
+                            Signup
+                        </button>
+                    </div>
+
+                    <div className="md:hidden flex items-center">
+                        <button className="mobile-menu-button">
+                            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className="mobile-menu hidden md:hidden">
+                <button className="block py-2 px-4 text-sm hover:bg-gray-200">Features</button>
+                <button className="block py-2 px-4 text-sm hover:bg-gray-200">Pricing</button>
+            </div>
+        </nav>
+    );
 }
 
 export default App;
