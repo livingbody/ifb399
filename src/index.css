@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    button {
-        @apply focus:outline-none focus:ring;
+@layer components {
+    button{
+        @apply focus:outline-none;
     }
 }
