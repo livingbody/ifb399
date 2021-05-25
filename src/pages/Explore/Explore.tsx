@@ -1,12 +1,18 @@
 import React from 'react'
-import BaseTemplate from '../../components/templates/BaseTemplate/BaseTemplate'
+import BaseLayout from '../../components/layout/BaseLayout/BaseLayout'
+import Pagination from '../../components/Pagination/Pagination'
+import ContentHeader from '../../components/header/ContentHeader'
 
 const Home = () => {
   return (
     <div>
-      <BaseTemplate title='Explore'>
-        <div>home</div>
-      </BaseTemplate>
+      <BaseLayout title='Explore'>
+        <div>
+          <ContentHeader />
+          <div className='h-80' />
+          <Pagination currentPage={1} pageNum={10} totalItemNum={99} />
+        </div>
+      </BaseLayout>
     </div>
   )
 }
