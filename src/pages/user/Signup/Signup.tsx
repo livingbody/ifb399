@@ -174,7 +174,7 @@ export default function Signup() {
                                         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-brand'
                     onClick={(event) => {
                       event.preventDefault()
-                      history.push('/explore')
+                      history.push('/')
                     }}
                   >
                     Sign up
