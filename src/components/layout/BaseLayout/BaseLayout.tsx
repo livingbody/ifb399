@@ -3,6 +3,8 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import logo from '../../../static/np.png'
 import { Link } from 'react-router-dom'
+import BaseFooter from '../../footers/BaseFooter'
+import Breadcrumb from '../../Breadcrumb/Breadcrumb'
 
 const navigation = [
   { title: 'Home', link: '/home' },
@@ -19,7 +21,7 @@ type Props = {
   children?: JSX.Element
 }
 
-const BaseTemplate = ({ title, children }: Props) => {
+const BaseLayout = ({ title, children }: Props) => {
   return (
     <div>
       <Disclosure as='nav' className='bg-gray-800'>
@@ -191,24 +193,45 @@ const BaseTemplate = ({ title, children }: Props) => {
         )}
       </Disclosure>
 
-      <header className='bg-white shadow'>
-        <div className='max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8'>
-          <h1 className='text-3xl font-bold leading-tight text-gray-900'>
-            {title}
-          </h1>
-        </div>
-      </header>
+      <div className='max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8'>
+        <Breadcrumb />
+      </div>
+
       <main>
-        <div className='max-w-7xl mx-auto py-4 sm:px-6 lg:px-8'>
-          <div className='py-0 sm:px-1'>
-            <div className='p-2 border-4 border-dashed border-gray-200 rounded-lg h-screen'>
-              {children}
+        <div className='max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+          <h1 className='sr-only'>Page title</h1>
+          {/* Main 3 column grid */}
+          <div className='grid grid-cols-1 gap-4 items-start lg:grid-cols-4 lg:gap-4'>
+            {/* Left column */}
+            <div className='grid grid-cols-1 gap-4 lg:col-span-3'>
+              <section aria-labelledby='section-1-title'>
+                {/*<h2 className='sr-only' id='section-1-title'>*/}
+                {/*  Section title*/}
+                {/*</h2>*/}
+                <div className='rounded-lg bg-white overflow-hidden shadow'>
+                  <div className='p-3'>{children}</div>
+                </div>
+              </section>
+            </div>
+
+            {/* Right column */}
+            <div className='grid grid-cols-1 gap-4'>
+              <section aria-labelledby='section-2-title'>
+                <h2 className='sr-only' id='section-2-title'>
+                  Section title
+                </h2>
+                <div className='rounded-lg bg-white overflow-hidden shadow'>
+                  <div className='p-6'>{/* Your content */}</div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       </main>
+
+      <BaseFooter />
     </div>
   )
 }
 
-export default BaseTemplate
+export default BaseLayout
