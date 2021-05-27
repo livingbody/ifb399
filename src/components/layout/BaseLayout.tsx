@@ -13,7 +13,7 @@ const navigation = [
   { title: 'Explore', link: '/' },
 ]
 
-const profile = ['Your Profile', 'Settings', 'Sign out']
+const profile = ['Profile', 'Settings', 'Log out']
 
 type Props = {
   title: string
@@ -22,7 +22,7 @@ type Props = {
 
 const BaseLayout = ({ title, children }: Props) => {
   return (
-    <div>
+    <div className='bg-gray-50'>
       <Disclosure as='nav' className='bg-gray-800'>
         {({ open }) => (
           <>
@@ -207,8 +207,8 @@ const BaseLayout = ({ title, children }: Props) => {
                 {/*<h2 className='sr-only' id='section-1-title'>*/}
                 {/*  Section title*/}
                 {/*</h2>*/}
-                <div className='rounded-lg bg-white overflow-hidden shadow'>
-                  <div className='p-3'>{children}</div>
+                <div className='rounded-md overflow-hidden shadow'>
+                  {children}
                 </div>
               </section>
             </div>

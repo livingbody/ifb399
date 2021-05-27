@@ -1,6 +1,6 @@
 const PersonalCenterBox = () => {
   return (
-    <div className='border rounded-md'>
+    <div className='border rounded-md bg-white'>
       <div className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '>
         <svg
           xmlns='http://www.w3.org/2000/svg'

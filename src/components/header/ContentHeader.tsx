@@ -15,11 +15,13 @@ const grade = [
 
 const ContentHeader = () => {
   return (
-    <div className='flex justify-between'>
-      <BaseTab />
-      <div className='flex space-x-4'>
-        <SimpleDropdown itemsList={technology} />
-        <SimpleDropdown itemsList={grade} />
+    <div className='p-3 bg-white'>
+      <div className='flex justify-between  '>
+        <BaseTab />
+        <div className='flex space-x-4'>
+          <SimpleDropdown itemsList={technology} />
+          <SimpleDropdown itemsList={grade} />
+        </div>
       </div>
     </div>
   )
