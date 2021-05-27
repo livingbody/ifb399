@@ -5,6 +5,7 @@ import NotFound from './pages/error/404'
 import Signup from './pages/user/Signup/Signup'
 import Explore from './pages/Explore/Explore'
 import Login from './pages/user/Login/Login'
+import Upload from './pages/Upload/Upload'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route path='/' exact>
           <Explore />
+        </Route>
+        <Route path='/upload' exact>
+          <Upload />
         </Route>
         <Route path='/signup' exact>
           <Signup />
