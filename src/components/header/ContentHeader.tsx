@@ -16,7 +16,7 @@ const grade = [
 const ContentHeader = () => {
   return (
     <div className='p-3 bg-white'>
-      <div className='flex justify-between  '>
+      <div className='flex justify-between items-center'>
         <BaseTab />
         <div className='flex space-x-4'>
           <SimpleDropdown itemsList={technology} />

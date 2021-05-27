@@ -7,10 +7,11 @@ import BaseListItem from '../../components/BaseListItem/BaseListItem'
 const Home = () => {
   return (
     <div>
-      <BaseLayout title='Explore'>
+      <BaseLayout>
         <div>
           <ContentHeader />
-          <div className='space-y-2 m-2 '>
+
+          <div className='space-y-2 m-2'>
             <BaseListItem />
             <BaseListItem />
             <BaseListItem />
@@ -22,6 +23,7 @@ const Home = () => {
             <BaseListItem />
             <BaseListItem />
           </div>
+
           <Pagination currentPage={1} pageNum={10} totalItemNum={99} />
         </div>
       </BaseLayout>
