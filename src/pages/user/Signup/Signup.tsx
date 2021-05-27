@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import np from '../../../static/np.png'
-import bgLogin from '../../../static/bg-login.jpg'
+import np from '../../../static/np_full.png'
+import bgLogin from '../../../static/bg_login.jpg'
 
 export default function Signup() {
   let history = useHistory()

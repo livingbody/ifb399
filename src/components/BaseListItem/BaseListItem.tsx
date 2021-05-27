@@ -1,5 +1,5 @@
 import React from 'react'
-import demoImage from '../../static/image1.png'
+import demoImage from '../../static/demo_course_image.png'
 
 const BaseListItem = () => {
   return (
