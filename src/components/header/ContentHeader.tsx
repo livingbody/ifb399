@@ -1,39 +1,27 @@
-import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import BaseTab from '../navigations/BaseTab'
+import SimpleDropdown from '../dropDowns/SimpleDropdown'
+import React from 'react'
 
-const navigation = [
-  { title: 'Recommend', link: '/' },
-  { title: 'Subscription', link: '/' },
-  { title: 'Digest', link: '/' },
+const technology = [
+  { id: 1, name: 'Raspberry Pi' },
+  { id: 2, name: 'Python' },
+  { id: 3, name: 'Arduino' },
+]
+const grade = [
+  { id: 1, name: 'Grade 7' },
+  { id: 2, name: 'Grade 8' },
+  { id: 3, name: 'Grade 9' },
 ]
 
-export default function ContentHeader() {
+const ContentHeader = () => {
   return (
-    <>
-      <div className='flex items-baseline space-x-1'>
-        {navigation.map((item, itemIdx) =>
-          itemIdx === 0 ? (
-            <Fragment key={item.title}>
-              <Link
-                key={item.title}
-                to={item.link}
-                className='text-gray-900 bg-blue-100 px-2 py-1 rounded-md text-md hover:text-gray-600'
-              >
-                {item.title}
-              </Link>
-            </Fragment>
-          ) : (
-            <Link
-              key={item.title}
-              to={item.link}
-              className='text-gray-700 px-3 py-1 rounded-md text-lg hover:bg-blue-50 hover:text-gray-900'
-            >
-              {item.title}
-            </Link>
-          )
-        )}
+    <div className='flex justify-between'>
+      <BaseTab />
+      <div className='flex space-x-4'>
+        <SimpleDropdown itemsList={technology} />
+        <SimpleDropdown itemsList={grade} />
       </div>
-      <div className='h-px my-3 bg-gray-200' />
-    </>
+    </div>
   )
 }
+export default ContentHeader

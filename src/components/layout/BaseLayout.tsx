@@ -1,20 +1,19 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import logo from '../../../static/np.png'
-import { Link } from 'react-router-dom'
-import BaseFooter from '../../footers/BaseFooter'
-import Breadcrumb from '../../Breadcrumb/Breadcrumb'
+import logo from '../../static/np.png'
+import BaseFooter from '../footers/BaseFooter'
+import { classNames } from '../../utils/utils'
+import CreateCenterBox from '../sideColum/CreateCenterBox'
+import PersonalCenterBox from '../sideColum/PersonalCenterBox'
 
 const navigation = [
   { title: 'Home', link: '/home' },
   { title: 'Explore', link: '/' },
 ]
-const profile = ['Your Profile', 'Settings', 'Sign out']
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+const profile = ['Your Profile', 'Settings', 'Sign out']
 
 type Props = {
   title: string
@@ -193,11 +192,11 @@ const BaseLayout = ({ title, children }: Props) => {
         )}
       </Disclosure>
 
-      <div className='max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8'>
-        <Breadcrumb />
-      </div>
+      {/*<div className='max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8'>*/}
+      {/*  <Breadcrumb />*/}
+      {/*</div>*/}
 
-      <main>
+      <main className='pt-6'>
         <div className='max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <h1 className='sr-only'>Page title</h1>
           {/* Main 3 column grid */}
@@ -218,17 +217,17 @@ const BaseLayout = ({ title, children }: Props) => {
             <div className='grid grid-cols-1 gap-4'>
               <section aria-labelledby='section-2-title'>
                 <h2 className='sr-only' id='section-2-title'>
-                  Section title
+                  Tool Box
                 </h2>
-                <div className='rounded-lg bg-white overflow-hidden shadow'>
-                  <div className='p-6'>{/* Your content */}</div>
+                <div className='space-y-3'>
+                  <CreateCenterBox />
+                  <PersonalCenterBox />
                 </div>
               </section>
             </div>
           </div>
         </div>
       </main>
-
       <BaseFooter />
     </div>
   )

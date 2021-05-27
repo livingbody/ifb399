@@ -5,6 +5,7 @@ type PaginationPropsType = {
   currentPage: number
   totalItemNum: number
 }
+
 const genListNumber = (start: number, stop: number) => {
   let list: number[] = []
   for (let i = start; i <= stop; i++) {
