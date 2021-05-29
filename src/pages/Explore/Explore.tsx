@@ -1,29 +1,22 @@
 import React from 'react'
 import BaseLayout from '../../components/layout/BaseLayout'
 import Pagination from '../../components/Pagination/Pagination'
-import ContentHeader from '../../components/header/ContentHeader'
+import ExploreHeader from '../../components/header/ExploreHeader'
 import BaseListItem from '../../components/BaseListItem/BaseListItem'
+import SectionTitle from '../../components/header/SectionTitle'
 
-const Home = () => {
+const Explore = () => {
   return (
     <div>
       <BaseLayout>
         <div>
-          <ContentHeader />
-
+          <ExploreHeader />
+          <SectionTitle title='Explore' description='Browse popular topics.' />
           <div className='space-y-2 m-2'>
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
-            <BaseListItem />
+            {Array.from(new Array(10).keys()).map((item) => (
+              <BaseListItem key={item} />
+            ))}
           </div>
-
           <Pagination currentPage={1} pageNum={10} totalItemNum={99} />
         </div>
       </BaseLayout>
@@ -31,4 +24,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Explore

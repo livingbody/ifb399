@@ -1,13 +1,21 @@
 import React from 'react'
 import { classNames } from '../../utils/utils'
 
-const tabs = [
-  { title: 'Recommend', link: '/', current: true },
-  { title: 'Subscription', link: '/', current: false },
-  { title: 'Digest', link: '/', current: false },
+const tabs_ = [
+  { description: 'Explore', link: '/', current: false },
+  {
+    description: 'Subscription',
+    link: '/explore/subscription',
+    current: false,
+  },
+  { description: 'Digest', link: '/explore/digest', current: false },
 ]
 
-export default function BaseTab() {
+export default function BaseTab({ currentTab }: { currentTab: string }) {
+  let tabs = tabs_.map((item) => {
+    item.current = item.description === currentTab
+    return item
+  })
   return (
     <div>
       <div className='sm:hidden'>
@@ -16,10 +24,10 @@ export default function BaseTab() {
           name='tabs'
           className='block w-full focus:ring-indigo-500 focus:border-brand border-gray-300 rounded-md'
           // @ts-ignore
-          defaultValue={tabs.find((tab) => tab.current).title}
+          defaultValue={tabs.find((tab) => tab.current).description}
         >
           {tabs.map((tab) => (
-            <option key={tab.title}>{tab.title}</option>
+            <option key={tab.description}>{tab.description}</option>
           ))}
         </select>
       </div>
@@ -27,7 +35,7 @@ export default function BaseTab() {
         <nav className='flex space-x-4' aria-label='Tabs'>
           {tabs.map((tab) => (
             <a
-              key={tab.title}
+              key={tab.description}
               href={tab.link}
               className={classNames(
                 tab.current
@@ -37,7 +45,7 @@ export default function BaseTab() {
               )}
               aria-current={tab.current ? 'page' : undefined}
             >
-              {tab.title}
+              {tab.description}
             </a>
           ))}
         </nav>

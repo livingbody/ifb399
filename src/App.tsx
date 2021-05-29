@@ -6,6 +6,9 @@ import Signup from './pages/user/Signup/Signup'
 import Explore from './pages/Explore/Explore'
 import Login from './pages/user/Login/Login'
 import Upload from './pages/Upload/Upload'
+import Detail from './pages/Detail/Detail'
+import Subscription from './pages/Explore/Subscription'
+import Digest from './pages/Explore/Digest'
 
 function App() {
   return (
@@ -16,6 +19,15 @@ function App() {
         </Route>
         <Route path='/' exact>
           <Explore />
+        </Route>
+        <Route path='/explore/detail' exact>
+          <Detail />
+        </Route>
+        <Route path='/explore/subscription' exact>
+          <Subscription />
+        </Route>
+        <Route path='/explore/digest' exact>
+          <Digest />
         </Route>
         <Route path='/upload' exact>
           <Upload />

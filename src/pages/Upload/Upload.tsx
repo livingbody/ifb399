@@ -45,7 +45,7 @@ const Upload = () => {
             renderHTML={(text) => mdParser.render(text)}
           />
         </div>
-        <div className='flex space-x-4'>
+        <div className='flex space-x-4 flex-wrap'>
           <div className='group w-36 h-24 bg-gray-100 border rounded-md flex flex-col items-center justify-center hover:bg-gray-200'>
             <div className='flex flex-col items-center justify-center'>
               <svg
@@ -145,7 +145,7 @@ const Upload = () => {
               </div>
             </div>
           </div>
-          <button className='h-24 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+          <button className='h-full self-center inline-flex items-center px-2 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
             Upload
           </button>
         </div>

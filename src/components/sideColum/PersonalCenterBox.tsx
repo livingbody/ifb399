@@ -1,7 +1,13 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
 const PersonalCenterBox = () => {
   return (
     <div className='border rounded-md bg-white'>
-      <div className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '>
+      <Link
+        to='/collection'
+        className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6 text-gray-700 group-hover:text-gray-900'
@@ -17,10 +23,13 @@ const PersonalCenterBox = () => {
           />
         </svg>
         <div className='text-sm text-gray-700 group-hover:text-gray-900'>
-          My Collection
+          Collection
         </div>
-      </div>
-      <div className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '>
+      </Link>
+      <Link
+        to='/explore/subscription'
+        className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6 text-gray-700 group-hover:text-gray-900'
@@ -36,10 +45,13 @@ const PersonalCenterBox = () => {
           />
         </svg>
         <div className='text-sm text-gray-700 group-hover:text-gray-900'>
-          My Subscription
+          Subscription
         </div>
-      </div>
-      <div className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '>
+      </Link>
+      <Link
+        to='my'
+        className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6 text-gray-700 group-hover:text-gray-900'
@@ -55,10 +67,13 @@ const PersonalCenterBox = () => {
           />
         </svg>
         <div className='text-sm text-gray-700 group-hover:text-gray-900'>
-          My Account
+          Account
         </div>
-      </div>
-      <div className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '>
+      </Link>
+      <Link
+        to='/feedback'
+        className='group flex items-center space-x-4 px-6 py-2 text-sm hover:bg-gray-100 '
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6 text-gray-700 group-hover:text-gray-900'
@@ -76,7 +91,7 @@ const PersonalCenterBox = () => {
         <div className='text-sm text-gray-700 group-hover:text-gray-900'>
           FeedBack
         </div>
-      </div>
+      </Link>
     </div>
   )
 }
