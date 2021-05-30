@@ -2,6 +2,12 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import BaseActionBar from '../../components/BaseActionBar/BaseActionBar'
 import BaseLayout from '../../components/layout/BaseLayout'
+import YoutubeEmbed from '../../components/YoutubeEmbed/YoutubeEmbed'
+import AttachmentsSection from '../../components/AttachmentsSection/AttachmentsSection'
+import BaseUserInfoBar from '../../components/BaseUserInfoBar/BaseUserInfoBar'
+import Comment from '../../components/Comment/Comment'
+
+import topImg from '../../static/top.png'
 
 const Detail = () => {
   const title = 'UNIT BINARY NUMBERS'
@@ -14,17 +20,15 @@ const Detail = () => {
     'how a standard system of encoding is used to represent numbers, text and other special characters. '
   return (
     <BaseLayout>
-      <div className='bg-white p-6 space-y-4'>
-        <div className='text-2xl font-bold'>{title}</div>
+      <div className='bg-white p-6 space-y-6'>
+        <img className='rounded-md' src={topImg} alt='#' />
+        <div className='text-3xl font-bold'>{title}</div>
+        <BaseUserInfoBar />
         <BaseActionBar />
-        <div className='flex justify-between'>
-          <div className='w-9/12'>
-            <ReactMarkdown>{body}</ReactMarkdown>
-          </div>
-          <div className='w-2/12 flex flex-col items-center justify-center '>
-            download
-          </div>
-        </div>
+        <YoutubeEmbed embedId='LpuPe81bc2w' />
+        <ReactMarkdown>{body}</ReactMarkdown>
+        <AttachmentsSection />
+        <Comment />
       </div>
     </BaseLayout>
   )

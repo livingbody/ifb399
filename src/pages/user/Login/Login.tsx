@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import np from '../../../static/np_full.png'
+import np from '../../../static/logo/np_full.png'
 import bgLogin from '../../../static/bg_login.jpg'
 
 export default function Login() {

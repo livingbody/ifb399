@@ -6,7 +6,7 @@ import Signup from './pages/user/Signup/Signup'
 import Explore from './pages/Explore/Explore'
 import Login from './pages/user/Login/Login'
 import Upload from './pages/Upload/Upload'
-import Detail from './pages/Detail/Detail'
+import Detail from './pages/Explore/Detail'
 import Subscription from './pages/Explore/Subscription'
 import Digest from './pages/Explore/Digest'
 

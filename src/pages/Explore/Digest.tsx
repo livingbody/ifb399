@@ -15,7 +15,9 @@ const Digest = () => {
             title='Digest'
             description='Browse the newest info you subscribed.'
           />
-          <DigestDate date='2021 week1:' />
+          <div className='pt-2'>
+            <DigestDate date='2021 week1:' />
+          </div>
           <div className='space-y-2 m-2'>
             {Array.from(new Array(3).keys()).map((item) => (
               <BaseListItem key={item} />

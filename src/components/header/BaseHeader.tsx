@@ -3,8 +3,8 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { SearchIcon } from '@heroicons/react/solid'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { classNames } from '../../utils/utils'
-import largeLogo from '../../static/np_full.png'
-import smallLogo from '../../static/np_logo.png'
+import largeLogo from '../../static/logo/np_full.png'
+import smallLogo from '../../static/logo/np_logo.png'
 
 const navigation = [
   { name: 'Home', href: '/home', current: false },

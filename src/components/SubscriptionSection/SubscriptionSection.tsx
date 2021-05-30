@@ -1,8 +1,8 @@
 import { AcademicCapIcon, CheckCircleIcon } from '@heroicons/react/solid'
 import React from 'react'
-import pythonLogo from '../../static/python.png'
-import javaLogo from '../../static/java.png'
-import jsLogo from '../../static/js.png'
+import pythonLogo from '../../static/tags/python.png'
+import javaLogo from '../../static/tags/java.png'
+import jsLogo from '../../static/tags/js.png'
 
 const Tags = [
   {
