@@ -1,5 +1,5 @@
-import { AcademicCapIcon, CheckCircleIcon } from '@heroicons/react/solid'
 import React from 'react'
+import { AcademicCapIcon, CheckCircleIcon } from '@heroicons/react/solid'
 import pythonLogo from '../../static/tags/python.png'
 import javaLogo from '../../static/tags/java.png'
 import jsLogo from '../../static/tags/js.png'

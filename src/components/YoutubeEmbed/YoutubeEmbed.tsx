@@ -1,3 +1,5 @@
+import React from "react"
+
 const YoutubeEmbed = ({ embedId }: { embedId: string }) => {
   return (
     <div className='w-full h-96'>

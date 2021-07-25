@@ -11,39 +11,39 @@ import Subscription from './pages/Explore/Subscription'
 import Digest from './pages/Explore/Digest'
 
 function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path='/home' exact>
-          <Home />
-        </Route>
-        <Route path='/' exact>
-          <Explore />
-        </Route>
-        <Route path='/explore/detail' exact>
-          <Detail />
-        </Route>
-        <Route path='/explore/subscription' exact>
-          <Subscription />
-        </Route>
-        <Route path='/explore/digest' exact>
-          <Digest />
-        </Route>
-        <Route path='/upload' exact>
-          <Upload />
-        </Route>
-        <Route path='/signup' exact>
-          <Signup />
-        </Route>
-        <Route path='/login' exact>
-          <Login />
-        </Route>
-        <Route path='/*'>
-          <NotFound />
-        </Route>
-      </Switch>
-    </Router>
-  )
+    return (
+        <Router>
+            <Switch>
+                <Route path='/home' exact>
+                    <Home />
+                </Route>
+                <Route path='/' exact>
+                    <Explore />
+                </Route>
+                <Route path='/explore/detail' exact>
+                    <Detail />
+                </Route>
+                <Route path='/explore/subscription' exact>
+                    <Subscription />
+                </Route>
+                <Route path='/explore/digest' exact>
+                    <Digest />
+                </Route>
+                <Route path='/upload' exact>
+                    <Upload />
+                </Route>
+                <Route path='/signup' exact>
+                    <Signup />
+                </Route>
+                <Route path='/login' exact>
+                    <Login />
+                </Route>
+                <Route path='/*'>
+                    <NotFound />
+                </Route>
+            </Switch>
+        </Router>
+    )
 }
 
 export default App
