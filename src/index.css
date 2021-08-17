@@ -7,3 +7,11 @@
     @apply focus:outline-none;
   }
 }
+
+@layer components {
+  button {
+    @apply focus:outline-none;
+    @apply focus:ring-brand;
+    @apply focus:border-brand;
+  }
+}
