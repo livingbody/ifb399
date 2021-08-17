@@ -10,6 +10,7 @@ import Detail from './pages/Explore/Detail'
 import Subscription from './pages/Explore/Subscription'
 import Digest from './pages/Explore/Digest'
 import AdminLogin from './pages/admin/AdminLogin'
+import Admin from './pages/admin/Admin'
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path='/admin/login' exact>
           <AdminLogin />
+        </Route>
+        <Route path='/admin' exact>
+          <Admin />
         </Route>
         <Route path='/*'>
           <NotFound />
