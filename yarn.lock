@@ -266,6 +266,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@rvxlab/tailwind-plugin-ios-full-height@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rvxlab/tailwind-plugin-ios-full-height/-/tailwind-plugin-ios-full-height-1.0.0.tgz#4bd2243454c5e35943b049a6ef435a7a0626731d"
+  integrity sha512-zy9TRxkLev8nwmD9pUDtxNXi3f+C6Q9sAA+/4mq8CPGZue+lEYV7wzJHRnV9vsE4Z0MwzP/wXiQ0DKj8b1/Axg==
+
 "@tailwindcss/forms@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.3.3.tgz#a29d22668804f3dae293dcadbef1aa6315c45b64"
