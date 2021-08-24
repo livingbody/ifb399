@@ -6,18 +6,18 @@ import { useHistory } from 'react-router-dom'
 const BaseListItem = () => {
   const history = useHistory()
   return (
-    <button
-      className='group border rounded-md py-2 px-6 bg-white hover:bg-gray-50'
+    <div
+      className='group border rounded-md bg-white hover:bg-gray-50 py-1 px-2 md:py-2 md:px-6'
       onClick={() => {
         history.push('/explore/detail')
       }}
     >
-      <div className='flex flex-col space-y-2'>
+      <div className='flex flex-col md:space-y-1'>
         <div className='flex justify-between'>
-          <div className='text-lg font-bold h-8 text-gray-800'>
+          <div className='text-md md:text-xl font-bold text-gray-800'>
             Here is the heading
           </div>
-          <div className='flex space-x-2'>
+          <div className='space-x-2 hidden sm:flex'>
             <div className='flex items-center px-2 rounded-md text-xs font-medium bg-blue-100 text-gray-700'>
               Python
             </div>
@@ -27,15 +27,13 @@ const BaseListItem = () => {
           </div>
         </div>
 
-        <div className='flex space-x-6 justify-between'>
-          <div className='rounded-md'>
-            <img
-              className='object-contain h-24 rounded-md'
-              src={demoImage}
-              alt='#'
-            />
-          </div>
-          <div className='w-full h-24 overflow-y-hidden text-gray-800 overflow-ellipsis text-left'>
+        <div className='flex justify-between space-x-2 items-center md:space-x-4'>
+          <img
+            className='object-contain h-20 w-24 md:w-32 rounded-sm'
+            src={demoImage}
+            alt='#'
+          />
+          <div className='w-full h-16 md:h-24 text-gray-800 text-left leading-4 text-sm md:text-base most-line-4'>
             The binary number system plays a central role in how information of
             all kinds is stored on computers. Understanding binary helps to
             unravel the mystery of computers, as students begin to understand
@@ -49,11 +47,11 @@ const BaseListItem = () => {
           </div>
         </div>
 
-        <div className='h-8 flex justify-between'>
+        <div className='h-4 md:h-8 flex justify-between'>
           <BaseActionBar />
         </div>
       </div>
-    </button>
+    </div>
   )
 }
 

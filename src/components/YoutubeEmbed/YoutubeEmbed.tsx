@@ -2,7 +2,7 @@ import * as React from 'react'
 
 const YoutubeEmbed = ({ embedId }: { embedId: string }) => {
   return (
-    <div className='w-full h-96'>
+    <div className='w-full h-64 sm:h-72 md:h-96'>
       <iframe
         width='100%'
         height='100%'

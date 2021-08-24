@@ -3,6 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        'iphone': '375px',
+        'xs': '500px',
+      },
       height: {
         120: '30rem',
         160: '40rem',

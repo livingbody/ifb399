@@ -3,15 +3,39 @@
 @tailwind utilities;
 
 @layer components {
-  button {
-    @apply focus:outline-none;
-  }
+    button {
+        @apply focus:outline-none;
+    }
 }
 
 @layer components {
-  button {
-    @apply focus:outline-none;
-    @apply focus:ring-brand;
-    @apply focus:border-brand;
-  }
+    button {
+        @apply focus:outline-none;
+        @apply focus:ring-brand;
+        @apply focus:border-brand;
+    }
+}
+
+.most-line-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.most-line-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.most-line-4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }

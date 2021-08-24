@@ -4,10 +4,10 @@ const BaseActionBar = () => {
   return (
     <div className='w-full flex justify-between'>
       <div className='flex space-x-2 md:space-x-4'>
-        <div className='flex space-x-1 text-sm text-gray-700 items-center'>
+        <div className='flex space-x-1 text-sm text-gray-500 items-center'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 text-gray-600'
+            className='md:h-6 md:w-6 h-4 w-4 text-gray-500'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -25,13 +25,13 @@ const BaseActionBar = () => {
               d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
             />
           </svg>
-          <div>99</div>
+          <div className='sm:text-sm'>99</div>
           <div className='hidden md:inline'>reads</div>
         </div>
-        <div className='flex space-x-1 text-sm text-gray-700 items-center'>
+        <div className='flex space-x-1 text-sm text-gray-500 items-center'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 text-gray-600'
+            className='md:h-6 md:w-6 h-4 w-4 text-gray-500'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -46,10 +46,10 @@ const BaseActionBar = () => {
           <div>9</div>
           <div className='hidden md:inline'>minutes ago</div>
         </div>
-        <div className='flex space-x-1 text-sm text-gray-700 items-center'>
+        <div className='flex space-x-1 text-sm text-gray-500 items-center'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 text-gray-600'
+            className='md:h-6 md:w-6 h-4 w-4 text-gray-500'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -65,10 +65,10 @@ const BaseActionBar = () => {
           <div className='hidden md:inline'>comments</div>
         </div>
 
-        <div className='flex space-x-1 text-sm text-gray-700 items-center'>
+        <div className='flex space-x-1 text-sm text-gray-500 items-center'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 text-gray-600'
+            className='md:h-6 md:w-6 h-4 w-4 text-gray-500'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -85,10 +85,10 @@ const BaseActionBar = () => {
         </div>
       </div>
 
-      <div className='flex space-x-1 text-sm text-gray-700 items-center'>
+      <div className='flex space-x-1 text-sm text-gray-500 items-center'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          className='h-6 w-6 text-gray-600'
+          className='md:h-6 md:w-6 h-4 w-4 text-gray-500'
           fill='none'
           viewBox='0 0 24 24'
           stroke='currentColor'
