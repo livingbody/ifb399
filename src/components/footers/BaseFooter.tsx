@@ -8,7 +8,7 @@ type propsType = {
 const navigation = [
   {
     name: 'GitHub',
-    href: 'https://github.com/ralph0813/ifb398',
+    href: 'https://github.com/ralph0813/ifb399',
     icon: (props: propsType) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
@@ -24,7 +24,7 @@ const navigation = [
 export default function BaseFooter() {
   return (
     <footer>
-      <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
+      <div className='max-w-7xl mx-auto py-4 xs:py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
         <div className='flex justify-center space-x-6 md:order-2'>
           {navigation.map((item) => (
             <a
@@ -37,9 +37,9 @@ export default function BaseFooter() {
             </a>
           ))}
         </div>
-        <div className='mt-8 md:mt-0 md:order-1'>
+        <div className='mt-4 md:mt-0 md:order-1'>
           <p className='text-center text-base text-gray-400'>
-            &copy; 2021 QUT IFB398, Team NULL POINTER. All rights reserved.
+            &copy; 2021 QUT IFB398 & IFB399, Team NULL POINTER. All rights reserved.
           </p>
         </div>
       </div>
